@@ -1,0 +1,7 @@
+print('My name Mark')
+print('Boxing,cooking and reading books')
+print(' Mark\nBoxing,desing and reading books')
+print('INCEPTION')
+print('Science Fiction')
+print('Cristopher Nolan')
+print('INCEPTION\nScience Fiction,Cristopher Nolan')
