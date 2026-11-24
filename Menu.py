@@ -1,9 +1,10 @@
 pizzas = []
 counts = []
 costs = []
+total_pizzas = 0
 
 while True:
-    print("Меню:")
+    print("\nМеню:")
     print("1. Вибрати піцу")
     print("2. Вихід")
     print("3. Показати замовлення")
@@ -11,7 +12,6 @@ while True:
     choice = input("Оберіть пункт: ")
 
     if choice == "1":
-        print("Ціни на піцу:")
         print("Маргарита – 150 грн")
         print("Пепероні – 180 грн")
         print("Чотири сири – 200 грн")
@@ -28,7 +28,16 @@ while True:
             continue
 
         count = int(input("Введіть кількість: "))
+        if count <= 0:
+            print("Кількість має бути більше 0!")
+            continue
+
+        if total_pizzas + count > 15:
+            print("Загальна кількість піц не може бути більше 15!")
+            continue
+
         cost = price * count
+        total_pizzas = total_pizzas + count
 
         pizzas.append(pizza)
         counts.append(count)
@@ -39,15 +48,15 @@ while True:
         print("До побачення!")
         break
     elif choice == "3":
-        total = 0
+        total_price = 0
         print("========== ВАШЕ ЗАМОВЛЕННЯ ==========")
         print("Піца            Кількість  Вартість")
         print("--------------------------------------")
         for i in range(len(pizzas)):
             print(f"{pizzas[i]:<15} {counts[i]:<10} {costs[i]} грн")
-            total = total + costs[i]
+            total_price = total_price + costs[i]
         print("--------------------------------------")
-        print("Загальна вартість:", total, "грн")
+        print("Загальна вартість:", total_price, "грн")
         print("======================================")
         print("Дякуємо за замовлення!")
     else:
