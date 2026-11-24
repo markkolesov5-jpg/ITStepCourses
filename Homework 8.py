@@ -14,7 +14,8 @@ while True:
     if mark < "0" or mark > "5":
         print("Введене не правильне число.Введіть ще раз!!")
 
-    if mark == "1":
+
+    if mark == "1" :
         print("1.Дуже погано!!")
         break
 
@@ -46,36 +47,41 @@ while True:
 count_tak = 0
 count_ni = 0
 while True:
-    answer = input(
-        "«Чи потрібно будувати більше дитячих садків у вашому місті дайте відповідь"
-        " так/ні ?» "
-    )
+  answer = input(
+      "«Чи потрібно будувати більше дитячих садків у вашому місті дайте відповідь"
+      " так/ні ?» "
+  )
 
-    if answer == "стоп":
-        break
-    elif answer == "так":
-        count_tak = count_tak + 1
-    elif answer == "ні":
-        count_ni = count_ni + 1
-    else:
-        print("Помилка")
+  if answer == "стоп":
+    break
+  elif answer == "так":
+    count_tak = count_tak + 1
+  elif answer == "ні":
+    count_ni = count_ni + 1
+  else:
+    print("Помилка")
 
 print("\n--- Результати опитування ---")
 print("Кількість голосів «так»:", count_tak)
 print("Кількість голосів «ні»:", count_ni)
 
 if count_tak > count_ni:
-    print("Результат: голосів «так» більше.")
+  print("Результат: голосів «так» більше.")
 elif count_ni > count_tak:
-    print("Результат: голосів «ні» більше.")
+  print("Результат: голосів «ні» більше.")
 else:
-    print("Результат: кількість голосів «так» та «ні» однакова.")
-    # Завдання 3
+  print("Результат: кількість голосів «так» та «ні» однакова.")
+#Завдання 3
 
-    print("Введіть число (0 для виходу):")
-    while True:
-        num = int(input("Ваше число: "))
 
-        if num == 0:
-            print("Вихід з програми.")
-            break
+  print("Введіть число (0 для виходу):")
+  while True:
+      num = int(input("Ваше число: "))
+
+      if num == 0:
+          print("Вихід з програми.")
+          break
+
+
+
+
